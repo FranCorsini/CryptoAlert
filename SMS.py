@@ -8,11 +8,16 @@ class Phone(object):
 
 	client = Client(account_sid, auth_token)
 
-	def send_sms():
+	def send_all_sms(text):
+		with open('phone_numbers.txt','r') as numbers:
+			for num in numbers:
+				send_sms(num,text)
+
+	def send_sms(number,text):
 		client.api.account.messages.create(
-		    to="asd",
+		    to=number,
 		    from_="+17163302683",
-		    body="Hello there!")
+		    body=text)
 
 
 	"""docstring for Phone"""
