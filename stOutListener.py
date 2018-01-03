@@ -3,6 +3,7 @@ from tweepy.streaming import StreamListener
 from SMS import Phone
 import json
 import re
+import time
 
 class StdOutListener(StreamListener):
 
@@ -14,8 +15,9 @@ class StdOutListener(StreamListener):
         text = data['text']
         
 
-        #print "Tweet from "
-        #print data['user']['id_str']
+        
+        print time.strftime("%H:%M:%S")
+        print data['user']['id_str']
         if data['user']['id_str'] == "877807935493033984":
             print "TWEET FROM BINACE"
             print text

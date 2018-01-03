@@ -19,7 +19,7 @@ class Phone(object):
 		print text
 
 		'''
-		client.api.account.messages.create(
+		self.client.api.account.messages.create(
 		    to=number,
 		    from_="+17163302683",
 		    body=text)
