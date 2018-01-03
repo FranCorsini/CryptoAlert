@@ -8,20 +8,22 @@ class Phone(object):
 
 	client = Client(account_sid, auth_token)
 
-	def send_all_sms(text):
-		with open('phone_numbers.txt','r') as numbers:
+	def send_all_sms(self,text):
+		with open('numbers.txt','r') as numbers:
 			for num in numbers:
-				send_sms(num,text)
+				self.send_sms(num,text)
 
-	def send_sms(number,text):
+	def send_sms(self,number,text):
+
+		print number
+		print text
+
+		'''
 		client.api.account.messages.create(
 		    to=number,
 		    from_="+17163302683",
 		    body=text)
+		   '''
 
 
-	"""docstring for Phone"""
-	def __init__(self, arg):
-		super(Phone, self).__init__()
-		self.arg = arg
 		

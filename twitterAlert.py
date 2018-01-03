@@ -23,6 +23,14 @@ def main():
 		auth = OAuthHandler(consumer_key, consumer_secret)
 		auth.set_access_token(access_token, access_token_secret)
 		stream = Stream(auth, l)	
+
+		#to remove
+		'''
+		print "sending 1"
+		l.test("test message")
+		print "sending 2"
+		l.test("This is a Lists")
+		'''
 		stream.filter(follow=["877807935493033984"])
 	except Exception as e:
 		print(e)
