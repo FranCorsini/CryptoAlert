@@ -7,7 +7,12 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 
 
+consumer_key="2cLgs8hNW9xIvNvalb3ViS80v"
+consumer_secret="Qxo9lH86kU3aq4cYjkdbBoa7yTbNjatM0jWijZGfzDSkRovLNi"
 
+
+access_token="116003647-JKLsIfJehzIWoP5tuGZWBpqNKB2MJ74u8y8yXbP1"	
+access_token_secret="KNG0LfOYO3Nr2Yh2GBy4J6hlBJ0CPoxBD6D1HlnHPzsBM"
 
 l = StdOutListener()
 
